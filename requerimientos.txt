@@ -1,0 +1,3 @@
+firebase-admin==6.5.0
+SpeechRecognition==3.10.4
+PyAudio==0.2.14
