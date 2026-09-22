@@ -41,5 +41,4 @@ class servicioVerduras:
         return listaVerduras
 
     def eliminarVerdura(self, claveVerdura):
-        """Elimina el registro indicado por su clave."""
         self.referenciaVerduras.child(claveVerdura).delete()
