@@ -4,7 +4,6 @@ CAMPO_PUNTAJE = "puntaje"
 
 
 class servicioVerduras:
-
     def __init__(self, referenciaRaiz):
         self.referenciaVerduras = referenciaRaiz.child(NOMBRE_NODO)
 
@@ -42,3 +41,10 @@ class servicioVerduras:
 
     def eliminarVerdura(self, claveVerdura):
         self.referenciaVerduras.child(claveVerdura).delete()
+
+    def actualizarVerdura(self, claveVerdura, nombre, puntaje):
+        cambios = {
+            CAMPO_NOMBRE: nombre.strip(),
+            CAMPO_PUNTAJE: int(puntaje),
+        }
+        self.referenciaVerduras.child(claveVerdura).update(cambios)
